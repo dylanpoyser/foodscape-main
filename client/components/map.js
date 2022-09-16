@@ -172,7 +172,7 @@ export default function Map() {
         // Create new map
         map.current = new mapboxgl.Map({
             container: mapContainer.current,
-            style: "mapbox://styles/huckcg/ckr12f5kk28ad18pjhrb713zo/draft",
+            style: "mapbox://styles/dylanpoyser/cl843f5v1006s14ro0ypp58sp",
             center: [lng, lat],
             zoom: defaultZoom,
         })
