@@ -11,7 +11,8 @@ import axios from "axios"
 
 export default function Map() {
     // dotenv-webpack gets token from environment variable
-    mapboxgl.accessToken = process.env.MAPBOX_TOKEN
+    // mapboxgl.accessToken = process.env.MAPBOX_TOKEN
+    mapboxgl.accessToken = "pk.eyJ1IjoiZHlsYW5wb3lzZXIiLCJhIjoiY2w4NDRraGdhMDV0dTN2cXlkOTdqaDNzciJ9.PtC7Xis98Lzehu3QOAeMeg"
 
     const defaultLng = -73.9855
     const defaultLat = 40.758
