@@ -1,6 +1,5 @@
 import React, { useRef, useEffect, useState } from "react"
 
-import { TextField, Toolbar, AppBar, Button } from "@material-ui/core"
 import SimpleAccordion from "./Accordion"
 import SearchBar from "./Search-Bar"
 import Tutorial from "./Tutorial"
@@ -11,7 +10,7 @@ import axios from "axios"
 
 export default function Map() {
     // dotenv-webpack gets token from environment variable
-    mapboxgl.accessToken = process.env.MAPBOX_TOKEN
+    mapboxgl.accessToken = "pk.eyJ1IjoiZHlsYW5wb3lzZXIiLCJhIjoiY2w4NDRraGdhMDV0dTN2cXlkOTdqaDNzciJ9.PtC7Xis98Lzehu3QOAeMeg"
 
     const defaultLng = -73.9855
     const defaultLat = 40.758
@@ -146,6 +145,7 @@ export default function Map() {
                 sort_by: "best_match",
             }
             const { data } = await axios.post("/api/yelp", searchRequest)
+            console.log(data)
             return data
             // return data
         } catch (error) {
@@ -172,7 +172,7 @@ export default function Map() {
         // Create new map
         map.current = new mapboxgl.Map({
             container: mapContainer.current,
-            style: "mapbox://styles/huckcg/ckr12f5kk28ad18pjhrb713zo/draft",
+            style: "mapbox://styles/dylanpoyser/cl843f5v1006s14ro0ypp58sp",
             center: [lng, lat],
             zoom: defaultZoom,
         })
