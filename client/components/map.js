@@ -9,7 +9,6 @@ import mapboxgl from "!mapbox-gl"
 import axios from "axios"
 
 export default function Map() {
-    // dotenv-webpack gets token from environment variable
     mapboxgl.accessToken = "pk.eyJ1IjoiZHlsYW5wb3lzZXIiLCJhIjoiY2w4NDRraGdhMDV0dTN2cXlkOTdqaDNzciJ9.PtC7Xis98Lzehu3QOAeMeg"
 
     const defaultLng = -73.9855
